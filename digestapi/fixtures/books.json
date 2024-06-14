@@ -1,0 +1,168 @@
+
+[
+  {
+    "model": "digestapi.book",
+    "pk": 1,
+    "fields": {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "isbn_number": "9780061120084",
+      "cover_image": "https://m.media-amazon.com/images/I/71FxgtFKcQL._AC_UF1000,1000_QL80_.jpg",
+      "user": 1
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 2,
+    "fields": {
+      "title": "1984",
+      "author": "George Orwell",
+      "isbn_number": "9780451524935",
+      "cover_image": "https://www.theoriginalunderground.com/cdn/shop/products/1984-george-orwell-cover-print-179850_1500x.jpg?v=1656593374",
+      "user": 1
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 3,
+    "fields": {
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "isbn_number": "9780743273565",
+      "cover_image": "https://m.media-amazon.com/images/I/81QuEGw8VPL._AC_UF1000,1000_QL80_.jpg",
+      "user": 1
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 4,
+    "fields": {
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "isbn_number": "9780316769488",
+      "cover_image": "https://m.media-amazon.com/images/I/8125BDk3l9L._AC_UF1000,1000_QL80_.jpg",
+      "user": 1
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 5,
+    "fields": {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "isbn_number": "9781503290563",
+      "cover_image": "https://m.media-amazon.com/images/M/MV5BMTA1NDQ3NTcyOTNeQTJeQWpwZ15BbWU3MDA0MzA4MzE@._V1_.jpg",
+      "user": 1
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 6,
+    "fields": {
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "isbn_number": "9780547928227",
+      "cover_image": "https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg",
+      "user": 2
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 7,
+    "fields": {
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "isbn_number": "9781451673319",
+      "cover_image": "https://m.media-amazon.com/images/I/61z7RDG3OIL._AC_UF1000,1000_QL80_.jpg",
+      "user": 2
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 8,
+    "fields": {
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "isbn_number": "9781503280786",
+      "cover_image": "https://m.media-amazon.com/images/I/81R91ODA9DL._AC_UF1000,1000_QL80_.jpg",
+      "user": 2
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 9,
+    "fields": {
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "isbn_number": "9780062315007",
+      "cover_image": "https://m.media-amazon.com/images/I/71zHDXu1TaL._AC_UF1000,1000_QL80_.jpg",
+      "user": 2
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 10,
+    "fields": {
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "isbn_number": "9780141441146",
+      "cover_image": "https://m.media-amazon.com/images/I/91zU70Aw9IS._AC_UF1000,1000_QL80_.jpg",
+      "user": 2
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 11,
+    "fields": {
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "isbn_number": "9780060850524",
+      "cover_image": "https://m.media-amazon.com/images/I/81zE42gT3xL._AC_UF1000,1000_QL80_.jpg",
+      "user": 3
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 12,
+    "fields": {
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "isbn_number": "9780544003415",
+      "cover_image": "https://m.media-amazon.com/images/I/7125+5E40JL._AC_UF1000,1000_QL80_.jpg",
+      "user": 3
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 13,
+    "fields": {
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "isbn_number": "9780486454115",
+      "cover_image": "https://m.media-amazon.com/images/I/71O2XIytdqL._AC_UF1000,1000_QL80_.jpg",
+      "user": 3
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 14,
+    "fields": {
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "isbn_number": "9780199232765",
+      "cover_image": "https://m.media-amazon.com/images/I/71wXZB-VtBL._AC_UF1000,1000_QL80_.jpg",
+      "user": 3
+    }
+  },
+  {
+    "model": "digestapi.book",
+    "pk": 15,
+    "fields": {
+      "title": "Anna Karenina",
+      "author": "Leo Tolstoy",
+      "isbn_number": "9780143035008",
+      "cover_image": "https://m.media-amazon.com/images/M/MV5BMTU0NDgxNDg0NV5BMl5BanBnXkFtZTcwMjE4MzkwOA@@._V1_.jpg",
+      "user": 3
+    }
+  }
+]

@@ -9,7 +9,7 @@ class Book(models.Model):
     isbn_number = models.CharField(max_length=13, null=True, blank=True)
     cover_image = models.URLField(null=True, blank=True)
     categories = models.ManyToManyField(
-        "Categories",
+        "Category",
         through='BookCategory',
         related_name="books"
     )
