@@ -11,24 +11,32 @@ class BookSerializer(serializers.ModelSerializer):
 
     def get_is_owner(self, obj):
         # Check if the authenticated user is the owner of the book
-        return self.context['request'].user == obj.user
+        return self.context["request"].user == obj.user
 
     class Meta:
         model = Book
-        fields = ['id', 'title', 'author', 'isbn_number', 'cover_image', 'is_owner', 'categories']
+        fields = [
+            "id",
+            "title",
+            "author",
+            "isbn_number",
+            "cover_image",
+            "is_owner",
+            "categories",
+        ]
 
 
 class BookViewSet(viewsets.ViewSet):
 
     def list(self, request):
         books = Book.objects.all()
-        serializer = BookSerializer(books, many=True, context={'request': request})
+        serializer = BookSerializer(books, many=True, context={"request": request})
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
         try:
             book = Book.objects.get(pk=pk)
-            serializer = BookSerializer(book, context={'request': request})
+            serializer = BookSerializer(book, context={"request": request})
             return Response(serializer.data)
 
         except Book.DoesNotExist:
@@ -36,10 +44,10 @@ class BookViewSet(viewsets.ViewSet):
 
     def create(self, request):
         # Get the data from the client's JSON payload
-        title = request.data.get('title')
-        author = request.data.get('author')
-        isbn_number = request.data.get('isbn_number')
-        cover_image = request.data.get('cover_image')
+        title = request.data.get("title")
+        author = request.data.get("author")
+        isbn_number = request.data.get("isbn_number")
+        cover_image = request.data.get("cover_image")
 
         # Create a book database row first, so you have a
         # primary key to work with
@@ -48,18 +56,18 @@ class BookViewSet(viewsets.ViewSet):
             title=title,
             author=author,
             cover_image=cover_image,
-            isbn_number=isbn_number)
+            isbn_number=isbn_number,
+        )
 
         # Establish the many-to-many relationships - In the example we get back a list of CatIds[3, 5]
-        category_ids = request.data.get('categories', [])
+        category_ids = request.data.get("categories", [])
         book.categories.set(category_ids)
 
-        serializer = BookSerializer(book, context={'request': request})
+        serializer = BookSerializer(book, context={"request": request})
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk=None):
         try:
-
             book = Book.objects.get(pk=pk)
 
             # Is the authenticated user allowed to edit this book?
@@ -67,16 +75,16 @@ class BookViewSet(viewsets.ViewSet):
 
             serializer = BookSerializer(data=request.data)
             if serializer.is_valid():
-                book.title = serializer.validated_data['title']
-                book.author = serializer.validated_data['author']
-                book.isbn_number = serializer.validated_data['isbn_number']
-                book.cover_image = serializer.validated_data['cover_image']
+                book.title = serializer.validated_data["title"]
+                book.author = serializer.validated_data["author"]
+                book.isbn_number = serializer.validated_data["isbn_number"]
+                book.cover_image = serializer.validated_data["cover_image"]
                 book.save()
 
-                category_ids = request.data.get('categories', [])
+                category_ids = request.data.get("categories", [])
                 book.categories.set(category_ids)
 
-                serializer = BookSerializer(book, context={'request': request})
+                serializer = BookSerializer(book, context={"request": request})
                 return Response(None, status.HTTP_204_NO_CONTENT)
 
             return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
